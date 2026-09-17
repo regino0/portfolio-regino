@@ -134,47 +134,25 @@ nav.main-nav{
   50%{transform:rotate(10deg)}
 }
 
+/* ============ IMAGEM NO LUGAR DO TÍTULO ============ */
 .hero-name{
-  font-weight:900;
-  font-size:42px;
-  line-height:1.05;
-  letter-spacing:-0.03em;
-  margin-bottom:16px;
+  margin-bottom:20px;
+  display:inline-block;
 }
-.hero-name .first{
+
+.hero-logo-img{
+  width:100%;
+  max-width:320px;
+  height:auto;
   display:block;
-  color:var(--navy);
   animation:revealText .9s cubic-bezier(.2,.9,.25,1) .3s both;
+  filter:drop-shadow(0 8px 16px rgba(30, 58, 138, 0.12));
 }
-.hero-name .last{
-  display:block;
-  background:none;
-  -webkit-background-clip:initial;
-  background-clip:initial;
-  -webkit-text-fill-color:#155EEF;
-  color:#155EEF;
-  animation:revealText .9s cubic-bezier(.2,.9,.25,1) .5s both;
-  position:relative;
-}
+
 @keyframes revealText{
   from{opacity:0;transform:translateY(40px);filter:blur(10px)}
   to{opacity:1;transform:none;filter:none}
 }
-
-.hero-title-accent{
-  position:relative;
-  display:inline-block;
-}
-.hero-title-accent::after{
-  content:"";
-  position:absolute;
-  left:0;bottom:-6px;
-  width:100%;height:4px;
-  background:linear-gradient(90deg,var(--blue),var(--blue-mid));
-  border-radius:4px;
-  animation:drawLine 1s ease .9s both;
-}
-@keyframes drawLine{from{width:0}to{width:100%}}
 
 .hero-role{
   font-size:15px;
@@ -481,9 +459,8 @@ nav.main-nav{
   
   .hero-text{flex:1;max-width:700px}
   
-  .hero-name{
-    font-size:clamp(56px, 9vw, 120px);
-    line-height:1;
+  .hero-logo-img{
+    max-width:520px;
   }
   
   .hero-role{
@@ -692,8 +669,7 @@ nav.main-nav{
       <div class="hero-greeting"><span>👋</span> Olá, eu sou</div>
       
       <h1 class="hero-name">
-        <span class="first">João Pedro</span>
-        <span class="last"><span class="hero-title-accent">REGINO</span></span>
+        <img src="adesivo.png" alt="João Pedro Regino" class="hero-logo-img" />
       </h1>
       
       <p class="hero-role"><strong>Designer Gráfico</strong> especializado em marcas que querem se destacar</p>
@@ -720,7 +696,6 @@ nav.main-nav{
           <div class="stat-number">50+</div>
           <div class="stat-label">Projetos</div>
         </div>
-                </div>
       </div>
     </div>
   </section>
@@ -836,200 +811,12 @@ nav.main-nav{
       <div class="service-card s1">
         <div class="ico">◎</div>
         <h3>Identidade Visual</h3>
-        <p>Logos, paletas, tipografias e manuais de marca completos para destacar seu negócio.</p>
-      </div>
-      <div class="service-card s2">
-        <div class="ico">▤</div>
-        <h3>Social Media</h3>
-        <p>Feed coeso, carrosséis, stories e capas pensados para engajamento e conversão.</p>
-      </div>
-      <div class="service-card s3">
-        <div class="ico">▷</div>
-        <h3>Motion Design</h3>
-        <p>Animações 2D, vinhetas, lower thirds e conteúdos em vídeo com movimento autoral.</p>
-      </div>
-      <div class="service-card s4">
-        <div class="ico">✂</div>
-        <h3>Edição de Vídeo</h3>
-        <p>Cortes dinâmicos, color grading, trilhas e finalização para reels e campanhas.</p>
+        <p>Logos, paletas, tipografias e manuais de marca completos.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ CONTATO ============ -->
-  <section class="page" id="page-contato">
-    <div class="section-header">
-      <span class="section-tag">// 04 — vamos conversar</span>
-      <h2 class="section-title">Entre em <span class="italic">contato</span></h2>
-    </div>
-    <div class="contact-intro">
-      <p>Tem um projeto ou precisa de uma solução em design? 
-<strong>Entre em contato</strong></p>
-    </div>
-    <div class="contact-list">
-      <a class="contact-item" href="https://wa.me/qr/B6SFEHMY6O5LK1" target="_blank" rel="noopener">
-        <div class="contact-icon wa">
-          <img src="whatsapp.png" alt="WhatsApp">
-        </div>
-        <div class="contact-info"><div class="label">WhatsApp</div><div class="value">Entrar em contato</div></div>
-      </a>
-      <a class="contact-item" href="https://instagram.com/regino.dsngrafico" target="_blank" rel="noopener">
-        <div class="contact-icon ig">
-          <svg class="instagram-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-          </svg>
-        </div>
-        <div class="contact-info"><div class="label">Instagram</div><div class="value">@regino.dsngrafico</div></div>
-      </a>
-      <a class="contact-item" href="https://www.behance.net/reginoo" target="_blank" rel="noopener">
-        <div class="contact-icon be">
-          <img src="behance.png" alt="Behance">
-        </div>
-        <div class="contact-info"><div class="label">Behance</div><div class="value">behance.net/reginoo</div></div>
-      </a>
-    </div>
-  </section>
-
-  <!-- ============ REDES ============ -->
-  <section class="page" id="page-redes">
-    <div class="section-header">
-      <span class="section-tag">// 05 — me siga</span>
-      <h2 class="section-title">Minhas <span class="italic">redes</span></h2>
-    </div>
-    <div class="social-grid">
-      <a class="social-card sc1" href="https://instagram.com/regino.dsngrafico" target="_blank" rel="noopener">
-        <span class="big-ico">
-          <svg class="instagram-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-          </svg>
-        </span>
-        <h3>Instagram</h3>
-        <p>@regino.dsngrafico</p>
-        <span class="pill">Design Diário</span>
-      </a>
-      <a class="social-card sc2" href="https://www.behance.net/reginoo" target="_blank" rel="noopener">
-        <span class="big-ico">
-          <img src="behance.png" alt="Behance">
-        </span>
-        <h3>Behance</h3>
-        <p>behance.net/reginoo</p>
-        <span class="pill">Cases completos</span>
-      </a>
-      <a class="social-card sc3" href="https://wa.me/qr/B6SFEHMY6O5LK1" target="_blank" rel="noopener">
-        <span class="big-ico">
-          <img src="whatsapp.png" alt="WhatsApp">
-        </span>
-        <h3>WhatsApp</h3>
-        <p>Mensagem direta</p>
-        <span class="pill">Orçamento rápido</span>
-      </a>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <p>© 2026 João Pedro Regino — designer gráfico</p>
-  </footer>
 </div>
 
-<!-- Modal -->
-<div class="modal-backdrop" id="modal">
-  <div class="modal-window">
-    <div class="modal-header">
-      <span id="modal-title">projeto</span>
-      <button class="modal-close" id="modal-close">✕</button>
-    </div>
-    <div class="modal-body" id="modal-body"></div>
-  </div>
-</div>
-
-<script>
-const PROJECTS = [
-  {
-   id:'p0', 
-    title:'Vendas e Gestão com IA',
-    tags:['Identidade Visual','Social Media'],
-    caption:'Social Media & Branding — 2026',
-    desc:`Projeto de identidade visual e social media focado em Vendas e Gestão com Inteligência Artificial. Desenvolvimento de peças estratégicas para redes sociais, com design moderno que transmite inovação, tecnologia e confiabilidade para o público corporativo.`,
-    role:`Direção de arte, design de social media e identidade visual`,
-   behanceLink: 'https://www.behance.net/gallery/255493991/SOCIAL-MEDIA-VENDAS-E-GESTAO-COM-IA'},
-
-  {   id:'p1', 
-    title:'Restituição Tributária',
-    tags:['Identidade Visual','Social Media'],
-    caption:'Social Media & Branding — 2025',
-    desc:`Projeto de identidade visual e social media desenvolvido para uma empresa especializada em restituição tributária. Criação de peças estratégicas para redes sociais, com design profissional e moderno, transmitindo credibilidade, segurança e autoridade para fortalecer a marca e facilitar a comunicação dos serviços com empresas e clientes.`,
-    role:`Direção de arte, design de social media e identidade visual`,
-   behanceLink: 'https://www.behance.net/gallery/226663627/SOCIAL-MEDIA-restituicao-tributaria'},
-
-  {   id:'p2', 
-    title:'Agropecuária & Rebanhos',
-    tags:['Identidade Visual','Social Media'],
-    caption:'Social Media & Branding — 2025',
-    desc:`Projeto de identidade visual e social media desenvolvido para uma empresa do setor agropecuário. Criação de peças estratégicas para redes sociais, com design moderno e profissional que valoriza a força do agronegócio, transmitindo confiança, qualidade e proximidade com produtores e clientes.`,
-   behanceLink: 'https://www.behance.net/gallery/226644709/SOCIAL-MEDIA-AGROPECUARIA-REBANHO'},
-
-  {   id:'p3', 
-    title:'Suplementos',
-    tags:['Identidade Visual','Social Media'],
-    caption:'Social Media & Branding — 2024',
-    desc:`Projeto de identidade visual e social media desenvolvido para uma marca de suplementos. Criação de peças estratégicas para redes sociais, com design moderno, energético e atrativo, destacando os produtos e transmitindo força, qualidade e confiança para o público.`,
-   behanceLink: 'https://www.behance.net/gallery/227923525/SOCIAL-MEDIA-SUPLEMENTO?tracking_source=project_owner_other_projects'}
-];
-
-const projectsGrid = document.getElementById('projects-grid');
-PROJECTS.forEach(p => {
-  const tagClass = (t) => {
-    if(t.toLowerCase().includes('motion')) return 'motion';
-    if(t.toLowerCase().includes('edição') || t.toLowerCase().includes('edicao')) return 'edicao';
-    if(t.toLowerCase().includes('identidade')) return 'identidade';
-    return '';
-  };
-  
-  const card = document.createElement('div');
-  card.className = 'project-card';
-  card.innerHTML = `
-    <div class="project-body">
-      <h3>${p.title}</h3>
-      <div class="project-caption">${p.caption}</div>
-      <div class="project-tags">
-        ${p.tags.map(t => `<span class="tag ${tagClass(t)}">${t}</span>`).join('')}
-      </div>
-    </div>
-  `;
-  card.addEventListener('click', () => openModal(p));
-  projectsGrid.appendChild(card);
-});
-
-const modal = document.getElementById('modal');
-const modalBody = document.getElementById('modal-body');
-const modalTitle = document.getElementById('modal-title');
-document.getElementById('modal-close').addEventListener('click', closeModal);
-modal.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
-
-function openModal(p){
-  modalTitle.textContent = p.title;
-  modalBody.innerHTML = `
-    <h2>${p.title}</h2>
-    <div class="caption">${p.caption}</div>
-    <div class="tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-    <p>${p.desc}</p>
-    <div class="modal-role"><strong>Papel no projeto:</strong> ${p.role}</div>
-    <a class="modal-behance" href="${p.behanceLink || 'https://www.behance.net/reginoo'}" target="_blank" rel="noopener">Ver no Behance ↗</a>
-  `;
-  modal.classList.add('show');
-}
-function closeModal(){ modal.classList.remove('show'); }
-document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
-
-const pages = document.querySelectorAll('.page');
-const navLinks = document.querySelectorAll('.nav-pill');
-function goTo(name){
-  pages.forEach(p => p.classList.toggle('active', p.id === `page-${name}`));
-  navLinks.forEach(l => l.classList.toggle('active', l.dataset.page === name));
-  window.scrollTo({top:0, behavior:'smooth'});
-}
-navLinks.forEach(l => l.addEventListener('click', () => goTo(l.dataset.page)));
-document.querySelectorAll('[data-nav]').forEach(b => b.addEventListener('click', () => goTo(b.dataset.nav)));
-</script>
 </body>
 </html>
